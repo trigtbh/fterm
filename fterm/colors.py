@@ -1,18 +1,23 @@
 import curses
 
-BLACK = curses.COLOR_BLACK
-RED = curses.COLOR_RED
-GREEN = curses.COLOR_GREEN
-YELLOW = curses.COLOR_YELLOW
-BLUE = curses.COLOR_BLUE
-MAGENTA = curses.COLOR_MAGENTA
-CYAN = curses.COLOR_CYAN
-WHITE = curses.COLOR_WHITE
+class Color:
+    def __init__(self, fg: int):
+        self.fg = fg
+    
+
+BLACK = Color(curses.COLOR_BLACK)
+RED = Color(curses.COLOR_RED)
+GREEN = Color(curses.COLOR_GREEN)
+YELLOW = Color(curses.COLOR_YELLOW)
+BLUE = Color(curses.COLOR_BLUE)
+MAGENTA = Color(curses.COLOR_MAGENTA)
+CYAN = Color(curses.COLOR_CYAN)
+WHITE = Color(curses.COLOR_WHITE)
 
 # optional
-ORANGE = 208
-PURPLE = 129
-BROWN = 94
-PINK = 217
-GRAY = 8
-GREY = GRAY
+ORANGE = Color(208)
+PURPLE = Color(129)
+BROWN = Color(94)
+PINK = Color(217)
+GRAY = Color(8)
+GREY = Color(GRAY)
